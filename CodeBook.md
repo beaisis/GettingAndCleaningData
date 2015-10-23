@@ -2,12 +2,13 @@
 
 Description of run_analytics.R process
 
-1. Merges training, test and subject data set and combines to a single data file.
-2. Replace columns numbers with feature names, subject andactivity
-3. Select just the mean and standard deviation measures
-4. Make friendly names for selected columns
-5. Label the data set with descriptive activity names. 
-6. Creates a tidy data set with a average for each variable for each activity and each subject. 
+Run_analysis performs te following functions
+-1. Merges training, test and subject data set and combines to a single data file.
+-2. Replace columns numbers with feature names, subject andactivity
+-3. Select just the mean and standard deviation measures
+-4. Make friendly names for selected columns
+-5. Label the data set with descriptive activity names. 
+-6. Creates a tidy data set with a average for each variable for each activity and each subject. 
 
 These variables identify the unique subject/activity pair the variables relate to:
  - Subject: the integer subject ID.

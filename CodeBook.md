@@ -3,10 +3,9 @@
 Description of run_analytics.R process
 
 1. Loads 'plyr' library
-*step 1
+step 1
 
 These variables identify the unique subject/activity pair the variables relate to:
-
  - Subject: the integer subject ID.
  - Activity: the string activity name:
   - Walking
@@ -16,16 +15,13 @@ These variables identify the unique subject/activity pair the variables relate t
   - Standing
   - Laying
 
-
-
 All variables are the mean and Standard deviation of a measurement for each subject and activity. This is indicated by Std or  Mean in the variable name.  All values are floating point numbers.
-
-The columns included in the output file are listed below:
 
 The following fields represent the mean of recorded data points for the given subject and activity. The detailed description of the measurement types can be found in features_info.txt (included in the data zip file).
 
-*subject_id - The id of the experiment participant.
-*activity_labels - The name of the activity that the measurements correspond to, like LAYING or WALKING
+## Columns
+*subject_id 
+*activity_labels 
 *imeBodyAccelerometerMean()-X
 *TimeBodyAccelerometerMean()-Y
 *TimeBodyAccelerometerMean()-Z

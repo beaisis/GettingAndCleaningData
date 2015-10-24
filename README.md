@@ -12,7 +12,16 @@ The sensor signals (accelerometer and gyroscope) were pre-processed by applying 
 
 The Study's data set can be found here:
   https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip 
-This script uses the UCI HAR Dataset downloaded to:  "./UCI HAR Dataset/dataset.zip
+The script uses the subdirectory "./UCI HAR Dataset/" for the files.  The script will create the 
+subdirectory, download the Dataset to the subdirectory and unzip the files. Once unzipped, the following steps are executed
+against the files 
+ 1. Merges training, test and subject data set and combines to a single data file.
+ 2. Replace columns numbers with feature names, subject andactivity
+ 3. Select just the mean and standard deviation measures
+ 4. Make friendly names for selected columns
+ 5. Label the data set with descriptive activity names. 
+ 6. Creates a tidy data set with a average for each variable for each activity and each subject. 
+
 
 To Create the tidy data set
 
@@ -20,18 +29,8 @@ To Create the tidy data set
 2. Source run_analysis.R into the working directory
 3. The program will create a subdirectory from your working directory. The subdirectory is: "/UCI HAR Dataset"
 4. The program will load the data set, unzip the files into the subdirectory.
-5. The program will transform the data sets per Transformation Section
+5. The program will transform the data sets per steps 1-6 above.
 3. The final data set is 'tidy.csv' and will also be placed into the subdirectory..   
-
-Transformation
-
-The following steps were taken to transform the initial data set. 
- 1. Merges training, test and subject data set and combines to a single data file.
- 2. Replace columns numbers with feature names, subject and activity
- 3. Select just the mean and standard deviation measures
- 4. Make friendly names for selected columns
- 5. Label the data set with descriptive activity names. 
- 6. Creates a tidy data set with a average for each variable for each activity and each subject. 
 
 Tidy CSV
 

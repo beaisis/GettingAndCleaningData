@@ -1,8 +1,6 @@
 # Code Book
 
-Description of run_analytics.R process
-
-Run_analysis performs the following functions:
+Run_analysis performs the following functions on the study's data set:
 * 1. Merges training, test and subject data set and combines to a single data file
 * 2. Replace columns numbers with feature names, subject andactivity
 * 3. Select just the mean and standard deviation measures
@@ -15,27 +13,20 @@ Run_analysis performs the following functions:
 tidy.csv can be read with R: read.table("tidy.csv", header = TRUE). A description of the variables can be found in 'CodeBook.md'.
 
 
-# Variables 
+### TIDY Columns:
 
-These variables identify the unique subject/activity pair the variables relate to:
- - Subject: the integer subject ID.
- - Activity: the string activity name:
+The variables are the mean and Standard deviation of a measurement for each subject and activity. This is indicated by Std or Mean in the variable name.  All values are floating point numbers. The detailed description of the measurement types can be found in features_info.txt (included in the data zip file).
+
+The following fields represent the mean and STD of recorded data points for the given subject and activity. 
+
+* subject_id: the integer subject ID.
+* Activity: 
   - Walking
   - Walking Upstairs
   - Walking Downstairs
   - Sitting
   - Standing
   - Laying
-
-All variables are the mean and Standard deviation of a measurement for each subject and activity. This is indicated by Std or Mean in the variable name.  All values are floating point numbers.
-
-
-### Columns:
-
-The following fields represent the mean of recorded data points for the given subject and activity. The detailed description of the measurement types can be found in features_info.txt (included in the data zip file).
-
-* subject_id 
-* activity_labels 
 * TimeBodyAccelerometerMean()-X
 * TimeBodyAccelerometerMean()-Y
 * TimeBodyAccelerometerMean()-Z

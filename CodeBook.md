@@ -70,8 +70,8 @@ The following fields represent the mean and STD of recorded data points for the 
 * FrequencyBodyAccelerometerMean()-Y
 * FrequencyBodyAccelerometerMean()-Z
 * FrequencyBodyAccelerometerSTD()-X
-*-FrequencyBodyAccelerometerSTD()-Y
-*-FrequencyBodyAccelerometerSTD()-Z
+* FrequencyBodyAccelerometerSTD()-Y
+* FrequencyBodyAccelerometerSTD()-Z
 * FrequencyBodyAccelerometerMeanFreq()-X
 * FrequencyBodyAccelerometerMeanFreq()-Y
 * FrequencyBodyAccelerometerMeanFreq()-Z

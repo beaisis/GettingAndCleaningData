@@ -2,13 +2,16 @@
 
 # Coursera Class-033 : Getting and Cleaning Data Course Project
 # Brian Altman
-# October 20, 2015
+# October 25, 2015
 
-# This script uses the UCI HAR Dataset downloaded to: 
+# This script uses the UCI HAR Dataset located at https://https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
+# The script uses the subdirectory "./UCI HAR Dataset/" for the files.  The script will create the 
+# subdirectory, download the Dataset to the subdirectory and unzip the files. Once unzipped, the following steps are executed
+# against the files: 
 # 1. Merges training, test and subject data set and combines to a single data file.
 # 2. Replace columns numbers with feature names, subject andactivity
 # 3. Select just the mean and standard deviation measures
-# 4.  Make friendly names for selected columns
+# 4. Make friendly names for selected columns
 # 5. Label the data set with descriptive activity names. 
 # 6. Creates a tidy data set with a average for each variable for each activity and each subject. 
 
@@ -32,11 +35,15 @@ require("reshape2")
 require("plyr")
 
 
-#set working directory for dataset location
-setwd("C:/2015 R Folder")
+#download zip file and unzip files into sub directory of working directory
+DataSetUrl                <- "https://https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
+CurrentWorkingDirectory   <- getwd()
+subdirectory              <- "./UCI HAR Dataset"
 
-#download zip file and unzip files into sub directories
-DataSetUrl      <- "https://https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
+if (!file.exists(subdirectory)) {
+  dir.create(file.path(CurrentWorkingDirectory,subdirectory))
+}
+
 
 if(!file.exists("./UCI HAR Dataset/dataset.zip")) { 
        download.file("https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip", "./UCI HAR Dataset/dataset.zip") 
@@ -45,7 +52,6 @@ if(!file.exists("./UCI HAR Dataset/dataset.zip")) {
 
 
 #1. Read each set of files and merge into a single file
-
 merge1        <- read.table("./UCI HAR Dataset/train/X_train.txt")
 merge2        <- read.table("./UCI HAR Dataset/test/X_test.txt")
 mergedX       <- rbind(merge1, merge2)
@@ -106,5 +112,3 @@ tidyData <- aggregate(. ~subject + activity, subsetMergedAll, mean)
 tidyData <- tidyData[order(tidyData$subject,tidyData$activity),]
 write.csv(tidyData, file = "./UCI HAR Dataset/tidy.csv", row.names = FALSE)
 
-
-  

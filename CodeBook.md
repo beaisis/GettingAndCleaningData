@@ -8,7 +8,7 @@ Run_analysis performs the following functions on the study's data set:
 * 5. Label the data set with descriptive activity names. 
 * 6. Creates a tidy data set with a average for each variable for each activity and each subject. 
 
-# Tidy CSV
+### Tidy CSV
 
 tidy.csv can be read with R: read.table("tidy.csv", header = TRUE). A description of the variables can be found in 'CodeBook.md'.
 

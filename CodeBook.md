@@ -10,8 +10,7 @@ Run_analysis performs the following functions on the study's data set:
 
 ### Tidy CSV
 
-tidy.csv can be read with R: read.table("tidy.csv", header = TRUE). A description of the variables can be found in 'CodeBook.md'.
-
+tidy.csv can be read with R: read.table("tidy.csv", header = TRUE). 
 
 ### TIDY Columns:
 

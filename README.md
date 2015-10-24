@@ -10,25 +10,32 @@ The experiments have been carried out with a group of 30 volunteers within an ag
 
 The sensor signals (accelerometer and gyroscope) were pre-processed by applying noise filters and then sampled in fixed-width sliding windows of 2.56 sec and 50% overlap (128 readings/window). The sensor acceleration signal, which has gravitational and body motion components, was separated using a Butterworth low-pass filter into body acceleration and gravity. The gravitational force is assumed to have only low frequency components, therefore a filter with 0.3 Hz cutoff frequency was used. From each window, a vector of features was obtained by calculating variables from the time and frequency domain
 
-The data set can be found here:
+The Study's data set can be found here:
   https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip 
- 
 This script uses the UCI HAR Dataset downloaded to:  "./UCI HAR Dataset/dataset.zip
 
 To Create the tidy data set
+
 1. Start R
-2. Source run_analysis.R into ./UCI HAR Dataset from your worked directory
-3. The final data set is 'tidy.txt'.   
+2. Source run_analysis.R into the working directory
+3. The program will create a subdirectory from your working directory. The subdirectory is: "/UCI HAR Dataset"
+4. The program will load the data set, unzip the files into the subdirectory.
+5. The program will transform the data sets per Transformation Section
+3. The final data set is 'tidy.csv' and will also be placed into the subdirectory..   
+
+Transformation
 
 The following steps were taken to transform the initial data set. 
  1. Merges training, test and subject data set and combines to a single data file.
- 2. Replace columns numbers with feature names, subject andactivity
+ 2. Replace columns numbers with feature names, subject and activity
  3. Select just the mean and standard deviation measures
  4. Make friendly names for selected columns
  5. Label the data set with descriptive activity names. 
  6. Creates a tidy data set with a average for each variable for each activity and each subject. 
 
-tidy.txt can be read with R: read.table("tidy.txt", header = TRUE). A description of the variables can be found in 'CodeBook.md'.
+Tidy CSV
+
+tidy.csv can be read with R: read.table("tidy.csv", header = TRUE). A description of the variables can be found in 'CodeBook.md'.
 
 More information
 Detailed information on the experiment and the data can be found in  README.txt and features_info.txt files included in the experiment data zip file or find more information on the dataset homepage.

@@ -11,6 +11,13 @@ The data set can be found here:
  
 This script uses the UCI HAR Dataset downloaded to:  C:/2015 R Folder/UCI HAR Dataset/dataset.zip
 
+To Create the tidy data set
+Clone repository
+Download the compressed raw data and place in the cloned repository root directory
+Source run_analysis.R 
+
+
+
 The following steps were taken to transform the initial data set. 
  1. Merges training, test and subject data set and combines to a single data file.
  2. Replace columns numbers with feature names, subject andactivity
@@ -22,96 +29,6 @@ The following steps were taken to transform the initial data set.
 The final data set is 'tidy.txt' and it can be read with R: read.table("tidy.txt", header = TRUE). A description of the variables can be found in 'CodeBook.md'. 
 
 The columns included in the output file are listed below:
-
-### Columns:
-* subject_id 
-* activity_labels 
-* TimeBodyAccelerometerMean()-X
-* TimeBodyAccelerometerMean()-Y
-* TimeBodyAccelerometerMean()-Z
-* TimeBodyAccelerometerSTD()-X
-* TimeBodyAccelerometerSTD()-Y
-* TimeBodyAccelerometerSTD()-Z
-* TimeGravityAccelerometerMean()-X
-* TimeGravityAccelerometerMean()-Y
-* TimeGravityAccelerometerMean()-Z
-* TimeGravityAccelerometerSTD()-X
-* TimeGravityAccelerometerSTD()-Y
-* TimeGravityAccelerometerSTD()-Z
-* TimeBodyAccelerometerJerkMean()-X
-* TimeBodyAccelerometerJerkMean()-Y
-* TimeBodyAccelerometerJerkMean()-Z
-* TimeBodyAccelerometerJerkSTD()-X
-* TimeBodyAccelerometerJerkSTD()-Y
-* TimeBodyAccelerometerJerkSTD()-Z
-* TimeBodyGyroscopeMean()-X
-* TimeBodyGyroscopeMean()-Y
-* TimeBodyGyroscopeMean()-Z
-* TimeBodyGyroscopeSTD()-X
-* TimeBodyGyroscopeSTD()-Y
-* TimeBodyGyroscopeSTD()-Z
-* TimeBodyGyroscopeJerkMean()-X
-* TimeBodyGyroscopeJerkMean()-Y
-* TimeBodyGyroscopeJerkMean()-Z
-* TimeBodyGyroscopeJerkSTD()-X
-* TimeBodyGyroscopeJerkSTD()-Y
-* TimeBodyGyroscopeJerkSTD()-Z
-* TimeBodyAccelerometerMagnitudeMean()
-* TimeBodyAccelerometerMagnitudeSTD()
-* TimeGravityAccelerometerMagnitudeMean()
-* TimeGravityAccelerometerMagnitudeSTD()
-* TimeBodyAccelerometerJerkMagnitudeMean()
-* TimeBodyAccelerometerJerkMagnitudeSTD()
-* TimeBodyGyroscopeMagnitudeMean()
-* TimeBodyGyroscopeMagnitudeSTD()
-* TimeBodyGyroscopeJerkMagnitudeMean()
-* TimeBodyGyroscopeJerkMagnitudeSTD()
-* FrequencyBodyAccelerometerMean()-X
-* FrequencyBodyAccelerometerMean()-Y
-* FrequencyBodyAccelerometerMean()-Z
-* FrequencyBodyAccelerometerSTD()-X
-*-FrequencyBodyAccelerometerSTD()-Y
-*-FrequencyBodyAccelerometerSTD()-Z
-* FrequencyBodyAccelerometerMeanFreq()-X
-* FrequencyBodyAccelerometerMeanFreq()-Y
-* FrequencyBodyAccelerometerMeanFreq()-Z
-* FrequencyBodyAccelerometerJerkMean()-X
-* FrequencyBodyAccelerometerJerkMean()-Y
-* FrequencyBodyAccelerometerJerkMean()-Z
-* FrequencyBodyAccelerometerJerkSTD()-X
-* FrequencyBodyAccelerometerJerkSTD()-Y
-* FrequencyBodyAccelerometerJerkSTD()-Z
-* FrequencyBodyAccelerometerJerkMeanFreq()-X
-* FrequencyBodyAccelerometerJerkMeanFreq()-Y
-* FrequencyBodyAccelerometerJerkMeanFreq()-Z
-* FrequencyBodyGyroscopeMean()-X
-* FrequencyBodyGyroscopeMean()-Y
-* FrequencyBodyGyroscopeMean()-Z
-* FrequencyBodyGyroscopeSTD()-X
-* FrequencyBodyGyroscopeSTD()-Y
-* FrequencyBodyGyroscopeSTD()-Z
-* FrequencyBodyGyroscopeMeanFreq()-X
-* FrequencyBodyGyroscopeMeanFreq()-Y
-* FrequencyBodyGyroscopeMeanFreq()-Z
-* FrequencyBodyAccelerometerMagnitudeMean()
-* FrequencyBodyAccelerometerMagnitudeSTD()
-* FrequencyBodyAccelerometerMagnitudeMeanFreq()
-* FrequencyBodyAccelerometerJerkMagnitudeMean()
-* FrequencyBodyAccelerometerJerkMagnitudeSTD()
-* FrequencyBodyAccelerometerJerkMagnitudeMeanFreq()
-* FrequencyBodyGyroscopeMagnitudeMean()
-* FrequencyBodyGyroscopeMagnitudeSTD()
-* FrequencyBodyGyroscopeMagnitudeMeanFreq()
-* FrequencyBodyGyroscopeJerkMagnitudeMean()
-* FrequencyBodyGyroscopeJerkMagnitudeSTD()
-* FrequencyBodyGyroscopeJerkMagnitudeMeanFreq()
-* Angle(TimeBodyAccelerometerMean,Gravity)
-* Angle(TimeBodyAccelerometerJerkMean),GravityMean)
-* Angle(TimeBodyGyroscopeMean,GravityMean)
-* Angle(TimeBodyGyroscopeJerkMean,GravityMean)
-* Angle(X,GravityMean)
-* Angle(Y,GravityMean)
-* Angle(Z,GravityMean)
 
 More information
 Detailed information on the experiment and the data can be found in  README.txt and features_info.txt files included in the experiment data zip file or find more information on the dataset homepage.

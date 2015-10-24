@@ -35,12 +35,13 @@ against the files
 3. The program will create a subdirectory from your working directory. The subdirectory is: "/UCI HAR Dataset"
 4. The program will load the data set, unzip the files into the subdirectory.
 5. The program will transform the data sets per steps 1-6 above.
-3. The final data set is 'tidy.csv' and will also be placed into the subdirectory..   
+3. The final data set is 'tidy.txt' and will also be placed into the subdirectory..   
 
-### Tidy CSV
+### Tidy.txt
 
-tidy.csv can be read with R: read.table("tidy.csv", header = TRUE). A description of the variables can be found in 'CodeBook.md'.
+tidy.txt can be read with R: read.table("./UCI HAR Dataset/tidy.txt", header = TRUE). A description of the variables can be found in 'CodeBook.md'.
 
-More information
+### More information
+
 Detailed information on the experiment and the data can be found in  README.txt and features_info.txt files included in the experiment data zip file or find more information on the dataset homepage.
 

@@ -110,5 +110,5 @@ for (i in 1:6){
 #6 Creates a tidy data set with a average for each variable for each activity and each subject
 tidyData <- aggregate(. ~subject + activity, subsetMergedAll, mean)
 tidyData <- tidyData[order(tidyData$subject,tidyData$activity),]
-write.txt(tidyData, file = "./UCI HAR Dataset/tidy.txt", row.names = FALSE)
+write.table(tidyData, file = "./UCI HAR Dataset/tidy.txt", row.names = FALSE)
 

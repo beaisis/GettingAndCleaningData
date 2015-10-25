@@ -31,8 +31,8 @@ against the files
 ### To Create the tidy data set
 
 1. Start R
-2. Source run_analysis.R into the working directory
-3. The program will create a subdirectory from your working directory. The subdirectory is: "/UCI HAR Dataset"
+2. The program will create a subdirectory from your working directory. The subdirectory is: "/UCI HAR Dataset". Ensure that there is sufficient permissions to allow R to create this subdirectory. 
+3. Source run_analysis.R raw into the working directory
 4. The program will load the data set, unzip the files into the subdirectory.
 5. The program will transform the data sets per steps 1-6 above.
 3. The final data set is 'tidy.txt' and will also be placed into the subdirectory..   
